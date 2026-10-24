@@ -1,0 +1,244 @@
+// ********************************* //
+// Approximately 1435px
+// ********************************* //
+@media (max-width: 1518px) {
+  .section-hero::before {
+    display: block;
+  }
+
+  .section-feature::after {
+    display: block;
+  }
+}
+
+// ********************************* //
+// Approximately 1450px
+// ********************************* //
+@media (max-width: 90em) {
+  html {
+    font-size: 55%;
+  }
+
+  .section-hero::before {
+    left: 97%;
+    border-radius: none;
+  }
+
+  .section-feature::after {
+    border-radius: none;
+    left: -15%;
+  }
+}
+
+// ********************************* //
+// Approximately 1111px
+// ********************************* //
+@media (max-width: 69em) {
+  .header {
+    padding: 4rem;
+  }
+
+  .section-hero::before {
+    display: none;
+  }
+
+  .section-feature::after {
+    display: none;
+  }
+}
+
+@media (max-width: 60em) {
+  .heading,
+  .section-hero,
+  .section-feature,
+  .section-about {
+    padding: 4rem;
+  }
+
+  .section-hero {
+    .hero {
+      gap: 2rem;
+
+      &__text-box {
+        width: 110%;
+      }
+
+      &__image {
+        width: 140%;
+        margin-inline-start: 6rem;
+      }
+    }
+  }
+
+  .section-feature {
+    .feature {
+      grid-template-columns: 1fr;
+
+      &__image-box {
+        grid-template-columns: 0.9fr 1.1fr;
+      }
+
+      &__text-box {
+        width: 100%;
+        flex-direction: row;
+        gap: 0;
+        align-items: center;
+        line-height: 1.5;
+
+        .heading-secondary {
+          width: 40%;
+        }
+
+        p {
+          width: 70%;
+          padding-inline: 1rem;
+        }
+      }
+    }
+  }
+
+  .section-about {
+    .about {
+      grid-template-columns: repeat(2, 1fr);
+
+      &__item-box {
+        p {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 47em) {
+  .section-hero {
+    .hero {
+      grid-template-columns: 1fr;
+
+      &__image {
+        margin-block-start: 5rem;
+        margin-inline: auto;
+        width: 110%;
+        // height: 50rem;
+      }
+    }
+  }
+
+  .section-feature {
+    .feature {
+      &__image-box {
+        grid-template-columns: 0.8fr 1.2fr;
+        height: 40rem;
+        margin-inline-start: -5rem;
+
+        .features__card-setup {
+          background-size: cover;
+        }
+      }
+
+      &__text-box {
+        text-align: center;
+        gap: 2rem;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .section-about {
+    .about {
+      grid-template-columns: 1fr;
+      text-align: center;
+
+      &__item-box {
+        .heading-tertiary,
+        .about__description {
+          margin-inline: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 47em) {
+  .header,
+  .section-hero,
+  .section-feature,
+  .section-about,
+  .footer {
+    padding-inline: 2rem;
+  }
+
+  .header {
+    &__btn:link,
+    &__btn:visited {
+      padding-inline: 1.6rem;
+    }
+  }
+
+  .section-hero {
+    .hero {
+      &__text-box {
+        width: 100%;
+
+        .heading-primary {
+          font-size: 4.2rem;
+        }
+
+        .hero__btn {
+          font-size: 1.5rem;
+
+          .hero__btn-primary:link,
+          .hero__btn-primary:visited {
+            padding: 2rem 1.6rem;
+          }
+        }
+      }
+    }
+  }
+
+  .section-feature {
+    .feature {
+      &__image-box {
+        grid-template-columns: 1fr;
+        margin-inline-start: 0rem;
+        height: 100rem;
+
+        .features__card--orange {
+          background-size: cover;
+          background-position: bottom;
+        }
+
+        .features__card-setup {
+          background-image: url(../assets/desktop/image-glass-and-keyboard.jpg);
+          background-size: cover;
+        }
+      }
+
+      &__text-box {
+        .heading-secondary {
+          display: flex;
+          justify-content: center;
+          width: 60%;
+          text-align: center;
+        }
+
+        .feature__description {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .footer {
+    &__copyright {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+
+      span {
+        display: none;
+      }
+    }
+  }
+}

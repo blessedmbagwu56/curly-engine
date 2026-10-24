@@ -1,0 +1,42 @@
+// ******************************* //
+// Design system //
+// ******************************* //
+
+// - Font sizes (px)
+// 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 56 / 62 / 74 / 86 / 98
+
+// - Spacing system (px)
+// 2 / 4 / 8 / 12 / 16 / 24 / 25 / 32 / 48 / 58 / 64 /80 / 96 / 128
+//
+
+// ******************************* //
+// General/Base //
+// ******************************* //
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+.container {
+  @include container;
+}
+
+p {
+  font-size: $paragraph;
+  color: $color-text;
+  line-height: 1.5;
+}

@@ -1,0 +1,49 @@
+// Links
+@mixin links {
+  font-weight: $btn-weight;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+// Flexbox
+@mixin flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Grid
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 5rem;
+}
+
+@mixin container {
+  max-width: 118rem;
+  margin-inline: auto;
+}
+
+@mixin background {
+  border-radius: $radius-two;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin heading {
+  color: $color-blue;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -0.2rem;
+}
+
+// ********************************* //
+// Approximately 1450px
+// ********************************* //
+@media (max-width: 90em) {
+  @mixin container {
+    max-width: 110rem;
+  }
+}

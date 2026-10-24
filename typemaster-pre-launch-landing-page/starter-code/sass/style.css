@@ -1,0 +1,389 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 118rem;
+  margin-inline: auto;
+}
+
+p {
+  font-size: 1.8rem;
+  color: #7b8bad;
+  line-height: 1.5;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 4rem;
+}
+.header__btn:link, .header__btn:visited {
+  font-size: 1.8rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 2rem 4rem;
+  color: #162542;
+  transition: all 0.3s;
+  background-color: #e8eff2;
+}
+.header__btn:link:hover, .header__btn:visited:hover {
+  background-color: #162542;
+  color: #fff;
+}
+.header__btn:link:active, .header__btn:visited:active {
+  background-color: rgb(80.25, 91.5, 113.25);
+}
+
+.section-hero {
+  padding: 5rem 8rem;
+  position: relative;
+}
+.section-hero .hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 5rem;
+}
+.section-hero .hero__text-box {
+  display: flex;
+  flex-direction: column;
+  max-width: 45rem;
+}
+.section-hero .hero__text-box .heading-primary {
+  font-weight: 800;
+  color: #162542;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -0.2rem;
+  font-size: 5.6rem;
+  margin-block-end: 2rem;
+}
+.section-hero .hero__text-box .hero__description {
+  margin-block-end: 3rem;
+}
+.section-hero .hero__text-box .hero__btn {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  font-size: 1.8rem;
+}
+.section-hero .hero__text-box .hero__btn .hero__btn-primary:link,
+.section-hero .hero__text-box .hero__btn .hero__btn-primary:visited {
+  display: block;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  background-color: #f16718;
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 2rem 4rem;
+}
+.section-hero .hero__text-box .hero__btn .hero__btn-primary:link:hover,
+.section-hero .hero__text-box .hero__btn .hero__btn-primary:visited:hover {
+  background-color: rgb(244.5, 141, 81.75);
+}
+.section-hero .hero__text-box .hero__btn .hero__btn-primary:link:active,
+.section-hero .hero__text-box .hero__btn .hero__btn-primary:visited:active {
+  background-color: rgb(245.2, 148.6, 93.3);
+}
+.section-hero .hero__text-box .hero__btn .hero__btn-secondary:link,
+.section-hero .hero__text-box .hero__btn .hero__btn-secondary:visited {
+  color: #7b8bad;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.section-hero .hero__text-box .hero__btn .hero__btn-secondary:link:hover,
+.section-hero .hero__text-box .hero__btn .hero__btn-secondary:visited:hover {
+  color: rgb(74.3364485981, 88.8411214953, 119.6635514019);
+}
+.section-hero .hero__image {
+  max-width: 80rem;
+  width: 100%;
+  border-radius: 1.6rem;
+}
+.section-hero::before {
+  content: "";
+  position: absolute;
+  background-color: #e8eff2;
+  width: 25rem;
+  height: 24rem;
+  border-radius: 1.6rem;
+  left: 91.5%;
+  z-index: -999;
+  display: none;
+}
+
+.section-feature {
+  padding: 4rem 8rem;
+  position: relative;
+}
+.section-feature .feature {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: 5rem;
+}
+.section-feature .feature__image-box {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 2rem;
+  height: 58rem;
+}
+.section-feature .feature__image-box .features__card--orange {
+  background-image: linear-gradient(to right bottom, rgba(241, 103, 24, 0.8), rgba(241, 103, 24, 0.8)), url(../assets/desktop/image-phone-and-keyboard.jpg);
+  border-radius: 1.6rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.section-feature .feature__image-box .features__card-setup {
+  background-image: url(../assets/desktop/image-glass-and-keyboard.jpg);
+  border-radius: 1.6rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.section-feature .feature__text-box {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  margin-inline-start: auto;
+}
+.section-feature .feature__text-box .heading-secondary {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #162542;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -0.2rem;
+}
+.section-feature::after {
+  content: "";
+  position: absolute;
+  background-color: #e8eff2;
+  width: 25rem;
+  height: 24rem;
+  border-radius: 1.6rem;
+  top: 58%;
+  left: -9%;
+  z-index: -999;
+  display: none;
+}
+
+.section-about {
+  padding: 4rem 8rem;
+}
+.section-about .about {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+.section-about .about__item-box .icon {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: #f16718;
+  margin-block-end: 4rem;
+}
+.section-about .about__item-box .heading-tertiary {
+  color: #162542;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -0.2rem;
+  font-size: 2.4rem;
+  width: 20rem;
+  margin-block-end: 2rem;
+  font-weight: 700;
+}
+
+.footer {
+  padding: 4rem 8rem;
+}
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1518px) {
+  .section-hero::before {
+    display: block;
+  }
+  .section-feature::after {
+    display: block;
+  }
+}
+@media (max-width: 90em) {
+  html {
+    font-size: 55%;
+  }
+  .section-hero::before {
+    left: 97%;
+    border-radius: none;
+  }
+  .section-feature::after {
+    border-radius: none;
+    left: -15%;
+  }
+}
+@media (max-width: 69em) {
+  .header {
+    padding: 4rem;
+  }
+  .section-hero::before {
+    display: none;
+  }
+  .section-feature::after {
+    display: none;
+  }
+}
+@media (max-width: 60em) {
+  .heading,
+  .section-hero,
+  .section-feature,
+  .section-about {
+    padding: 4rem;
+  }
+  .section-hero .hero {
+    gap: 2rem;
+  }
+  .section-hero .hero__text-box {
+    width: 110%;
+  }
+  .section-hero .hero__image {
+    width: 140%;
+    margin-inline-start: 6rem;
+  }
+  .section-feature .feature {
+    grid-template-columns: 1fr;
+  }
+  .section-feature .feature__image-box {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+  .section-feature .feature__text-box {
+    width: 100%;
+    flex-direction: row;
+    gap: 0;
+    align-items: center;
+    line-height: 1.5;
+  }
+  .section-feature .feature__text-box .heading-secondary {
+    width: 40%;
+  }
+  .section-feature .feature__text-box p {
+    width: 70%;
+    padding-inline: 1rem;
+  }
+  .section-about .about {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .section-about .about__item-box p {
+    width: 80%;
+  }
+}
+@media (max-width: 47em) {
+  .section-hero .hero {
+    grid-template-columns: 1fr;
+  }
+  .section-hero .hero__image {
+    margin-block-start: 5rem;
+    margin-inline: auto;
+    width: 110%;
+  }
+  .section-feature .feature__image-box {
+    grid-template-columns: 0.8fr 1.2fr;
+    height: 40rem;
+    margin-inline-start: -5rem;
+  }
+  .section-feature .feature__image-box .features__card-setup {
+    background-size: cover;
+  }
+  .section-feature .feature__text-box {
+    text-align: center;
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .section-about .about {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .section-about .about__item-box .heading-tertiary,
+  .section-about .about__item-box .about__description {
+    margin-inline: auto;
+  }
+}
+@media (max-width: 47em) {
+  .header,
+  .section-hero,
+  .section-feature,
+  .section-about,
+  .footer {
+    padding-inline: 2rem;
+  }
+  .header__btn:link, .header__btn:visited {
+    padding-inline: 1.6rem;
+  }
+  .section-hero .hero__text-box {
+    width: 100%;
+  }
+  .section-hero .hero__text-box .heading-primary {
+    font-size: 4.2rem;
+  }
+  .section-hero .hero__text-box .hero__btn {
+    font-size: 1.5rem;
+  }
+  .section-hero .hero__text-box .hero__btn .hero__btn-primary:link,
+  .section-hero .hero__text-box .hero__btn .hero__btn-primary:visited {
+    padding: 2rem 1.6rem;
+  }
+  .section-feature .feature__image-box {
+    grid-template-columns: 1fr;
+    margin-inline-start: 0rem;
+    height: 100rem;
+  }
+  .section-feature .feature__image-box .features__card--orange {
+    background-size: cover;
+    background-position: bottom;
+  }
+  .section-feature .feature__image-box .features__card-setup {
+    background-image: url(../assets/desktop/image-glass-and-keyboard.jpg);
+    background-size: cover;
+  }
+  .section-feature .feature__text-box .heading-secondary {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    text-align: center;
+  }
+  .section-feature .feature__text-box .feature__description {
+    width: 100%;
+  }
+  .footer__copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .footer__copyright span {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

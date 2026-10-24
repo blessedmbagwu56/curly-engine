@@ -1,0 +1,221 @@
+// Imports
+@use "sass:color";
+
+@import "./variables";
+@import "./mixins";
+@import "./base";
+
+// Your styles follow below...
+// ******************************* //
+// Header //
+// ******************************* //
+
+.header {
+  @include flexbox;
+  padding-block: 4rem;
+
+  &__btn:link,
+  &__btn:visited {
+    font-size: $paragraph;
+    border-radius: $radius-one;
+
+    @include links;
+    padding: 2rem 4rem;
+
+    color: $color-blue;
+    transition: all 0.3s;
+    background-color: $color-grey;
+
+    &:hover {
+      background-color: $color-blue;
+      color: $color-white;
+    }
+
+    &:active {
+      background-color: color.mix(#ffffff, $color-blue, 25%);
+    }
+  }
+}
+
+// ******************************* //
+// Hero //
+// ******************************* //
+.section-hero {
+  padding: 5rem 8rem;
+  position: relative;
+
+  .hero {
+    @include grid;
+
+    &__text-box {
+      display: flex;
+      flex-direction: column;
+      max-width: 45rem;
+
+      .heading-primary {
+        font-weight: $heading-primary-weight;
+        @include heading;
+        font-size: 5.6rem;
+        margin-block-end: 2rem;
+      }
+
+      .hero__description {
+        margin-block-end: 3rem;
+      }
+
+      .hero__btn {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        font-size: $paragraph;
+
+        .hero__btn-primary:link,
+        .hero__btn-primary:visited {
+          display: block;
+          @include links;
+          transition: all 0.3s;
+          background-color: $color-orange;
+          color: $color-white;
+          border-radius: $radius-one;
+          padding: 2rem 4rem;
+
+          &:hover {
+            background-color: color.mix($color-white, $color-orange, 25%);
+          }
+
+          &:active {
+            background-color: color.mix($color-white, $color-orange, 30%);
+          }
+        }
+
+        .hero__btn-secondary:link,
+        .hero__btn-secondary:visited {
+          color: $color-text;
+          @include links;
+
+          &:hover {
+            color: darken($color-text, 20%);
+          }
+        }
+      }
+    }
+
+    &__image {
+      max-width: 80rem;
+      width: 100%;
+      border-radius: $radius-two;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $color-grey;
+    width: 25rem;
+    height: 24rem;
+    border-radius: $radius-two;
+    left: 91.5%;
+    z-index: -999;
+    display: none;
+  }
+}
+
+.section-feature {
+  padding: 4rem 8rem;
+  position: relative;
+
+  .feature {
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+    gap: 5rem;
+
+    &__image-box {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 2rem;
+      height: 58rem;
+
+      .features__card--orange {
+        background-image:
+          linear-gradient(
+            to right bottom,
+            rgba($color-orange, 0.8),
+            rgba($color-orange, 0.8)
+          ),
+          url(../assets/desktop/image-phone-and-keyboard.jpg);
+        @include background;
+      }
+
+      .features__card-setup {
+        background-image: url(../assets/desktop/image-glass-and-keyboard.jpg);
+        @include background;
+      }
+    }
+
+    &__text-box {
+      width: 30rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      justify-content: center;
+      margin-inline-start: auto;
+
+      .heading-secondary {
+        font-size: $heading-secondary;
+        font-weight: $heading-secondary-weight;
+        @include heading;
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $color-grey;
+    width: 25rem;
+    height: 24rem;
+    border-radius: $radius-two;
+    top: 58%;
+    left: -9%;
+    z-index: -999;
+    display: none;
+  }
+}
+
+.section-about {
+  padding: 4rem 8rem;
+
+  .about {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+
+    &__item-box {
+      .icon {
+        padding: 2rem;
+        border-radius: $radius-one;
+        background-color: $color-orange;
+        margin-block-end: 4rem;
+      }
+
+      .heading-tertiary {
+        @include heading;
+        font-size: $heading-tertiary;
+        width: 20rem;
+        margin-block-end: 2rem;
+        font-weight: $heading-tertiary-weight;
+      }
+    }
+  }
+}
+
+.footer {
+  padding: 4rem 8rem;
+
+  &__copyright {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@import "./queries";
